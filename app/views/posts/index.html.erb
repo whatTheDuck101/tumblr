@@ -2,6 +2,7 @@
 
 <% if @post.blank? %> 
   <p>Empty</p>
+  <%= link_to  "Create Post", new_post_path %>
 <% else %>
   <% @posts.each do |post| %>
     <div class="post_wrapper">
