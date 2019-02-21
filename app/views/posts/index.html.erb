@@ -1,8 +1,12 @@
-<h1> Index Post </h1>
-
-<% if @post.blank? %> 
-  <p>Empty</p>
-  <%= link_to  "Create Post", new_post_path %>
+<div class="page_wrapper">
+  <h1>  <%="Post".pluralize(@posts.count) %> </h1>
+  </div>
+<% if @post.blank? %>
+  
+  <div class="page_wrapper">
+    <p>Empty</p>
+    <%= link_to  "Create Post", new_post_path %>
+  </div>
 <% else %>
   <% @posts.each do |post| %>
     <div class="post_wrapper">
