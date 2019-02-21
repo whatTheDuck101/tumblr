@@ -1,6 +1,9 @@
-<% if @post.blank? %> 
+<div class="page_wrapper">
+  <h1>  <%="Post".pluralize(@posts.count) %> </h1>
+  </div>
+<% if @post.blank? %>
+  
   <div class="page_wrapper">
-    <h1> Index Post </h1>
     <p>Empty</p>
     <%= link_to  "Create Post", new_post_path %>
   </div>
