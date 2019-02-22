@@ -1,8 +1,7 @@
 <div class="page_wrapper">
   <h1>  <%="Post".pluralize(@posts.count) %> </h1>
   </div>
-<% if @post.blank? %>
-  
+<% if @posts.empty? %>
   <div class="page_wrapper">
     <p>Empty</p>
     <%= link_to  "Create Post", new_post_path %>
@@ -12,7 +11,7 @@
     <div class="post_wrapper">
       <h2 class="title"><%= link_to  post.title, post %></h2>
       <p class="body"><%= truncate(post.body, length:100 ) %></p>
-      <p class="date"><%= time_ago_in_words(post.create_at) %> ago</p>
+      <p class="date"><%= time_ago_in_words(post.created_at) %> ago</p>
     </div>
   <% end %>
 <% end %>
