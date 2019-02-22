@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   before_action :post_find, only: %i[show edit update destory]
+  before_action :authenticate_user!, except: %i[index show]
   def index
     @posts = Post.all.order('created_at DESC')
   end

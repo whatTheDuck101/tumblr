@@ -78,6 +78,9 @@ a {
     top: 39%;
     font-size: 1em;
     color: #ffffff;
+    &:hover {
+      color: #3d4d56;
+    }
   }
 }
 
